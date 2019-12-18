@@ -1,792 +1,372 @@
 <html>
-
-<head>
-
-<title>Jack Collison | Resume</title>
-<meta charset="utf-8">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="theme-color" content="#ffffff">
-<link href='https://fonts.googleapis.com/css?family=Lato:400,700,300,900' rel='stylesheet' type='text/css'>
-<!-- <link rel="stylesheet" media="screen" href="particles.js-master/demo/css/style.css"> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link rel="icon" href="icon.png"/>
-
-<style>
-* {
-	margin: 0;
-	padding: 0;
-	color: rgb(30, 30, 30);
-}
-
-.header {
-	font-family: 'Lato';
-	color: rgb(150, 150, 150);
-	font-size: 21px;
-	font-weight: 300;
-	margin-top: 25px;
-	margin-left: 12px;
-	margin-right: 12px;
-}
-
-#navbar .header {
-	vertical-align: top;
-	font-family: 'Lato';
-	font-size: 20px;
-	font-weight: 300;
-	display: inline;
-	height: 32px;
-	line-height: 32px;
-	margin-left: 12px;
-	border-bottom: 1px solid rgb(30, 30, 30);
-	cursor: pointer;
-	color: rgb(30, 30, 30);
-}
-
-#navbar .header:hover {
-	transition: 0.4s ease-in-out;
-	color: #4292c6;
-	border-bottom: 1px solid #4292c6;
-}
-
-#navbar .header.active {
-	font-weight: 400;
-	border-width: 2px;
-}
-
-a {
-	color: black;
-	text-decoration: none;
-}
-
-a:hover {
-	transition: 0.4s ease-in-out;
-	color: #4292c6;
-	text-decoration: underline;
-}
-
-canvas{
-	display: block;
-	vertical-align: bottom;
-}
-.container {
-	position: absolute;
-	width: 900px;
-	margin-top: 50px;
-	left: 50%;
-	margin-left: -450px;
-	margin-bottom: 100px;
-	background:rgba(255,255,255,0.93);
-	z-index: 5;
-}
-
-.icon {
-	width: 32px;
-	height: 32px;
-	background-image: url('img/icon.svg');
-	background-size: cover;
-	display: inline-block;
-	margin-right: 30px;
-}
-
-.copy {
-	font-family: 'Lato';
-	font-size: 15px;
-	font-weight: 300;
-	position: fixed;
-	bottom: 5%;
-	right: 5%;
-	color: rgb(150, 150, 150);
-}
-
-.hero {
-	font-family: 'Lato';
-	font-size: 60px;
-	font-weight: bold;
-	margin-top: 12px;
-	margin-left: 12px;
-	margin-bottom: 12px;
-
-}
-
-.col {
-	width: 375px;
-	float: left;
-}
-
-.col2 {
-	width: 350px;
-	float: left;
-	margin-right: 12px;
-}
-
-.col.right, .col2.right {
-	margin-left: 50px;
-}
-
-.col .header {
-	font-family: 'Lato';
-	color: rgb(50, 50, 50);
-	font-size: 22px;
-	font-weight: 500;
-	text-transform: uppercase;
-	margin-top: 50px;
-	margin-left: 12px;
-}
-
-.bullet {
-	font-family: 'Lato';
-	font-size: 15px;
-	font-weight: 300;
-	margin-top: 15px;
-	color: rgb(70, 70, 70);
-	margin-left: 12px;
-}
-
-.clear {
-	clear: both;
-}
-
-.top25 {
-	margin-top: 25px;
-	margin-left: 12px;
-}
-
-.title {
-	font-family: 'Lato';
-	color: rgb(50, 50, 50);
-	font-size: 40px;
-	font-weight: 300;
-	margin-top: 25px;
-	margin-left: 12px;
-}
-
-.subtitle {
-	font-family: 'Lato';
-	color: rgb(150, 150, 150);
-	font-size: 22px;
-	font-weight: 300;
-	text-transform: uppercase;
-	margin-top: 25px;
-	margin-left: 12px;
-}
-
-.subtext {
-	font-family: 'Lato';
-	font-size: 15px;
-	font-weight: 300;
-	margin-top: 15px;
-	margin-bottom: 5px;
-	color: rgb(70, 70, 70);
-	margin-left: 12px;
-	margin-right: 12px;
-}
-
-.links {
-	font-family: 'Lato';
-	font-size: 15px;
-	font-weight: 300;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	color: rgb(70, 70, 70);
-	margin-left: 12px;
-}
-
-
-.sectitle {
-	font-family: 'Lato';
-	color: rgb(50, 50, 50);
-	font-size: 15px;
-	text-transform: uppercase;
-	font-weight: 600;
-	margin-top: 30px;
-	margin-left: 12px;
-}
-
-.emphasis {
-	font-weight: 700;
-	color: rgb(50, 50, 50);
-}
-
-
-.emphasis2 {
-	font-weight: 700;
-	color: rgb(50, 50, 50);
-	text-transform: uppercase;
-	font-style: normal;
-}
-
-
-.explainer {
-	font-size: 13px;
-	color: rgb(150, 150, 150);
-	margin-top: 5px;
-}
-
-.popup {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background-color: #000000;
-	z-index: 10000;
-}
-
-.popup .text {
-	width: 400px;
-	height: 200px;
-	line-height: 200px;
-	text-align: center;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-left: -200px;
-	margin-top: -100px;
-	background-color: white;
-	font-family: 'Lato';
-	font-size: 20px;
-	font-weight: 300;
-}
-
-.intro{
-	z-index: 999;
-	background-color: black;
-	height: 100%;
-	width: 100%;
-	position: fixed;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	align-content: center;
-	align-items: center;
-}
-
-p{
-  color: white; 
-  font-family: 'Lato';
-  font-size: 60px;
-  margin: 10px 0 0 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 30em;
-  animation: type 6s steps(60, end); 
-}
-
-@keyframes type{ 
-  from { width: 0; } 
-}
-
-.collapsible_educ, .collapsible_proj {
-    background-color: inherit;
-    color: black;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-}
-
-.collapsible_educ:after, .collapsible_proj:after {
-    content: '\2795'; 
-    font-size: 13px;
-    color: black;
-    margin-left: 10px;
-}
-
-.collapsible_educ:hover, .collapsible_proj:hover, .collapsible_educ.enabled:after, .collapsible_proj.enabled:after {
-	color: #4292c6;
-    content: "\2796"; 
-}
-
-.content_educ, .content_proj {
-    background-color: inherit;
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.4s ease-in-out;
-    opacity: 0;
-}
-
-.content_educ.show, .content_proj.show {
-    opacity: 1;
-    max-height: 500px;
-}
-
-#particles-js canvas{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	z-index: -10;
-	background: #111;
-}
-
-html{
-	background: #111;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-img {
-	height: 144px;
-	margin-top: 12px;
-	margin-left: 12px;
-	float: left;
-}
-
-.profile {
-	margin-top: 20px;
-	margin-left: 12px;
-	font-size: 28px;
-	font-family: 'Lato';
-	color: rgb(150, 150, 150);
-	font-weight: 300;
-}
-
-</style>
-</head>
-<body>
-
-<div id="intro" class="intro">
-	<p>Jack Collison</p>
-</div>
-
-<div id='popup' class="popup"><div id="popuptext" class="text">Please enable Javascript to continue.</div></div>
-
-<div class="container">
-
-	<a href="index.html" style="transition: none; color: black; text-decoration: none;" class="hero">Jack Collison</a>
-
-	<div id="navbar"></div>
-
-	<div id="about" class="slide1">
-
-		<div class="col left profile">
-			I'm a computational economist in the Bay Area, interested in statistical learning and its applications in economics.
-		</div>
-
-		<div class="col right profile">
-			<img src="profile.png" alt="Jack Collison">
-		</div>
-
-		<div class="col left">
-
-			<div class="header">Skills &amp; Interests</div>
-
-			<div class="bullet top25">Economics</div>
-			<div class="bullet">Statistical Analysis</div>
-			<div class="bullet">Financial Modeling</div>
-			<div class="bullet">Machine Learning</div>
-			<div class="bullet">Econometrics</div>
-
-		</div>
-
-		<div class="col right">
-
-			<div class="header">Contact Info</div>
-
-			<div class="bullet top25">Mail: jcollison97@gmail.com</div>
-			<div class="bullet">Mail: jack10@stanford.edu</div>
-			<div class="bullet">Phone: (715)-212-4370</div>
-			<div class="bullet">Resume: <a target="blank" style="color: #4292c6;" href="resume.pdf">Link</a></div>
-
-		</div>
-
-		<div class="clear" style="margin-bottom: 20px;"></div>
-
-		<div class="copy">&copy; Jack Collison, 2018</div>
-
-	</div>
-
-	<div id="education" class="slide2">
-
-		<div class="title">Education &amp; Coursework</div>
-
-		<div class="subtitle">Stanford University</div>
-
-		<div class="subtext">Undergraduate majoring in Economics and minoring in Statistics. Graduating Class of 2020.</div>
-
-		<button class="sectitle collapsible_educ">THEORETICAL ECONOMICS</button>
-		<div class="content_educ">
-			<div class="col2 left">
-				<div class="bullet"><span class="emphasis">ECON 1 </span> Principles of Economics <div class="explainer">Introductory course in economics; develop intuition in both micro and macroeconomics</div></div>
-				<div class="bullet"><span class="emphasis">ECON 52 </span> Economic Analysis III<div class="explainer">Theory of long-run economic growth, fluctuations, fiscal policy, and monetary policy </div></div>
-			</div>
-			
-			<div class="col2 right">
-				<div class="bullet"><span class="emphasis"> ECON 50</span> Economics Analysis I<div class="explainer">Framework for individual consumer and firm behavior; tools developed from multivariable calculus and optimization</div></div>
-				<div class="bullet"><span class="emphasis">ECON 51</span> Economic Analysis II<div class="explainer">Neoclassical analysis of equilibria, welfare, risk and uncertainty, and game theory using multivariable calculus</div></div>
-			</div>
-
-			<div class="clear"></div>
-		</div>
-		
-		<button class="sectitle collapsible_educ">APPLIED ECONOMICS &amp; ECONOMETRICS</button>
-		<div class="content_educ">
-			<div class="col2 left">
-				<div class="bullet"><span class="emphasis">ECON 45 </span> Using Big Data to Solve Social and Economic Problems<div class="explainer">Regression analysis, causal inference, and machine learning applied to problems in the social sector </div></div>
-				<div class="bullet"><span class="emphasis">ECON 102A</span> Introduction to Statistical Methods (Postcalculus) for Social Scientists<div class="explainer">Probabalistic modeling and statistical techniques relevant for economics and econometrics</div></div>
-
-			</div>
-
-			<div class="col2 right">
-				<div class="bullet"><span class="emphasis">ECON 102B </span> Applied Econometrics<div class="explainer">Intermediate econometrics, developing regression techniques, and goodness-of-fit tests with STATA</div></div>
-				<div class="bullet"><span class="emphasis">ECON 112 </span> Financial Markets and Institutions: Recent Developments<div class="explainer">Quantitative study on mortgages, securitization, credit ratings, and monetary policy, among others</div></div>
-			</div>
-
-			<div class="clear"></div>
-		</div>
-
-		<button class="sectitle collapsible_educ">STATISTICS &amp; COMPUTER SCIENCE</button>
-		<div class="content_educ">
-			<div class="col2 left">
-				<div class="bullet"><span class="emphasis">CS 106B </span> Programming Abstractions <div class="explainer">Fundamentals of programming abstractions; study of data structures and basic algorithms in C++</div></div>
-				<div class="bullet"><span class="emphasis">STATS 216 </span> Introduction to Statistical Learning<div class="explainer">Developed tools including regressions, non-linear models, tree-based methods, and unsupervised clustering in R</div></div>
-			</div>
-			
-			<div class="col2 right">
-				<div class="bullet"><span class="emphasis"> STATS 191 </span> Introduction to Applied Statistics<div class="explainer">Statistical tools for data analysis, including regression, ANOVA, bootstrap, and cross-validation in R</div></div>
-				<div class="bullet"><span class="emphasis">STATS 116 </span> Theory of Probability<div class="explainer">Probability spaces of models or phenomena with  statistical regularity; proof-based with multivariable calculus</div></div>
-			</div>
-
-			<div class="clear"></div>
-		</div>
-
-		<button class="sectitle collapsible_educ">MATHEMATICS</button>
-		<div class="content_educ">
-			<div class="col2 left">
-				<div class="bullet"><span class="emphasis">CS 103 </span> Mathematical Foundations of Computing <div class="explainer">Predicate logic, induction, set theory, formal language theory, Turing machines, and more; proof-based</div></div>
-			</div>
-			
-			<div class="col2 right">
-				<div class="bullet"><span class="emphasis">MATH 51 </span> Linear Algebra, Multivariable Calculus, and Modern Applications<div class="explainer">Matricix algebra and linear transformations, eigenvalues, gradients, and constrained optimization, among others</div></div>
-			</div>
-
-			<div class="clear"></div>
-		</div>
-		
-		<button class="sectitle collapsible_educ" style="margin-bottom: 12px;">LANGUAGE</button>
-		<div class="content_educ" style="margin-bottom: 12px;">
-			<div class="col2 left">
-				<div class="bullet"><span class="emphasis">CHINLANG 1 </span> First-Year Modern Chinese, First Quarter <div class="explainer">Course in Mandarin, including conversation, grammar, reading, and elementary composition skills</div></div>
-				
-			</div>
-
-			<div class="col2 right">
-				<div class="bullet" style="margin-bottom: 20px;"><span class="emphasis">CHINLANG 2 </span> First-Year Modern Chinese, Second Quarter<div class="explainer">Continuation of study of Mandarin; continue developing conversation, grammar, reading, and composition skills</div></div>
+	<head>
+		<title>Jack Collison | Resume</title>
+		<meta charset="utf-8">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="theme-color" content="#ffffff">
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,700,300,900' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- <link rel="icon" href="icon.png"/> -->
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<div id="particles-js" class="intro">
+			<div id="intro">	
+				<p class="intro-title">Jack Collison</p>
 			</div>
 		</div>
-		<div class="copy">&copy; Jack Collison, 2018</div>
-
-	</div>
-
-	<div id="experience" class="slide3">
-		
-		<div class="title">Work Experience</div>
-		<div class="header">Stanford Economics Department, Research Assistant<span style="float: right;">Jun, 2018 - Present</span></div>
-
-		<div class="subtext">Research Assistant to Dr. Pete Klenow and Dr. Liran Einav, BPO to Visa Inc.'s Global Data Science division. Scraped millions of Yelp reviews to validate Visa Inc.'s transactional data, and Business Dynamics Research Consortium time series. Conducted statistical analysis and imperfect matching on validated datasets.</div>
-
-		<div class="clear"></div>
-
-		<div class="header">Stanford Institute for Economic Policy Research, Research Assistant<span style="float: right;">Oct, 2017 - Present</span></div>
-
-		<div class="subtext">Analyzing credit card data from Visa Inc. to establish a universe of retail outlets in the U.S. retail sector. Developing a comprehensive dataset on retail establishment location, etnry, exit, and card transactions for understanding offline and online competition and growth, as well as consumer welfare. Tools include data cleaning and merging, webscraping, and machine learning.</div>
-
-		<div class="clear"></div>
-
-		<div class="header">NASA Frontier Development Lab, Researcher<span style="float: right;">Jun - Aug, 2017</span></div>
-
-		<div class="subtext">Automated the process of tracking meteor showers associated with long period comets. Developed Python script to extract data from an FTP server, run computer vision analysis, update logs, use deep-learning-based classification, and upload cleaned data for visualization. In addition, wrote a policy paper on NASA's investment in artificial intelligence.</div>
-
-		<div class="clear" style="margin-bottom: 12px;"></div>
-		
-		<div class="copy">&copy; Jack Collison, 2018</div>
-
-	</div>
-	
-	<div id="volunteering" class="slide4">
-		<div class="header">Stanford University Statistics for Social Good, Data Scientist<span style="float: right;">Feb, 2018 - Present</span></div>
-
-		<div class="subtext">Collaborating with the Foundation for Precision Medicine on an Alzheimer's research project with the goal of predicting early-onset Alzheimer's. Using Google Cloud's BigQuery via SQL, R, and Python to develop machine learning tools to discover predictors for Alzheimer's, as well as mapping economic data to determine variance in insurance coverage by provider, location, etc. in the U.S.</div>
-
-		<div class="clear"></div>
-		
-		<div class="header">Stanford University Code the Change, Front-End Developer<span style="float: right;">Sept, 2016 - Jun, 2017</span></div>
-
-		<div class="subtext">Developed a Facebook Free Basics website for CultureMesh, a non-profit social networking platform that connects refugees. Responsible for front-end development, using HTML and CSS, implementing a PHP backend.</div>
-
-		<div class="clear"></div>
-
-		<div class="header">Run for the Fund, Founder<span style="float: right;">Jun - Sept, 2014</span></div>
-
-		<div class="subtext">Dedicated a 500 mile cumulative run over the summer to the Cindy Zautcke Memorial Scholarship Fund, a scholarship supporting students from inner-city Milwaukee. Sought sponsors and pledges, raising over $5,000.</div>
-
-		<div class="clear" style="margin-bottom: 20px;"></div>
-		
-		<div class="copy">&copy; Jack Collison, 2018</div>
-	</div>
-
-	<div id="research" class="slide5">
-
-		<div class="title">Publications &amp; Presentations</div>
-
-		<a class="header" target="blank" style="text-decoration: none; margin-top: 20px;" href="comets.pdf">A survey of southern hemisphere meteor showers</a>
-
-		<div class="subtext">One of the primary authors in paper published in the Journal of Planetary and Space Sciences. DOI: 10.1016/j.pss.2018.02.013</div>
-
-		<div class="subtext" style="margin-bottom: 20px;">Meteor showers identify streams of meteoroids that approach from a similar direction and presumably originated from the same parent object. In recent years, over 300 meteor showers have been identified, of which 112 have been established and are certain to exist. A working list of identified showers is maintained by the IAU Meteor Data Center.
-		
-		The southern hemisphere meteor showers are not as well mapped as those on the northern hemisphere.
-
-		We report here on results from a CAMS-type video-based meteoroid orbit survey (Jenniskens et al., 2011) conducted in New Zealand in 2014–2016. The capability of the technique was demonstrated in earlier small scale video-based meteoroid orbit surveys in the southern hemi- sphere (e.g., Jopek et al., 2010; Molau and Kerr, 2014). The newly detected showers are compared to recent results from a southern hemi- sphere radar orbital survey conducted with the Southern Argentina Agile MEteor Radar (SAAMER) (Pokorny et al., 2017). It is found that video-based and radar-based observations detect, in general, different streams.
-
-		</div>
-		
-		<a class="header" target="blank" style="text-decoration: none;" href="imc.pdf">Automating meteor validation and trajectory quality control in the search for long-period comets</a>
-		
-		<div class="subtext">Presented at the International Meteor Conference 2017 by Marcelo de Cicco.</div>
-		
-		<div class="subtext" style="margin-bottom: 20px;">
-		We describe an effort to automate the CAMS (Cameras for All-sky Meteor Surveillance) data re- duction pipeline using artificial intelligence techniques to discriminate meteors from other types of detections and to determine correct solutions during triangulation. The effort will make it possible to have the results from a night of low-light video observations available to the observers the following day. As part of the data reduction pipeline, meteors are classified as real and assigned to showers. Results are presented in such a way that each shower can be identified, and new showers from the occasional encounter with the dust trails of long-period comets can be recognized. The detection of such rare showers will allow to direct the search for long-period comets in dedicated deep surveys.
-		</div>
-		
-		<a class="header" target="blank" style="text-decoration: none;" href="nips.pdf">Searching for Long-Period Comets with Deep Learning Tools</a>
-		
-		<div class="subtext">Contributor. Presented at the Workshop on Deep Learning for Physical Sciences (at the Conference on Neural Information Processing Systems) by Susana Zoghbi.</div>
-		
-		<div class="subtext" style="margin-bottom: 20px;">
-		The aim of this paper is to provide Deep Learning tools to aid the search for debris of long-period comets. We describe an effort to automate the CAMS (Cameras for Allsky Meteor Surveillance) data reduction pipeline to discriminate meteors from other types of detection. The effort helps to process the data collected every night from low-light video observations, and makes results available to the observer the following day. Detections are classified as meteors or non-meteors using two methods, a convolutional neural network (CNN), and a long short term memory network (LSTM). Our achieved performance makes our models suitable to be deployed on site and help alleviate the cognitive load on astronomers to classify night detections.
+		<div class="sticky navbar" id="navbar">
+			<a id="about" class="tab" href="#about_content">About</a>
+			<a id="education" class="tab" href="#education_content" style="margin-left: 0px;">Education</a>
+			<a id="experience" class="tab" href="#experience_content" style="margin-left: 0px;">Experience</a>
+			<a id="volunteering" class="tab" href="#volunteering_content" style="margin-left: 0px;">On-Campus</a>
+			<a id="research" class="tab" href="#research_content" style="margin-left: 0px;">Research</a>
+			<a id="projects" class="tab" href="#projects_content" style="margin-left: 0px;">Projects</a>
+			<div id="name_tab" class="tab" style="padding-left: 400px; background: white; float: left; position: relative; font-size: 25px; width: 150px; padding-top: 8px; box-shadow: none; padding-bottom: 0px;">Jack Collison</div>
 		</div>
 
-		<a target="blank" href="https://www.youtube.com/watch?v=ElinNSA6EKQ" style="text-decoration: none;" class="header">Artificial Intelligence Strategic Vision: A Framework for Augmenting Science at NASA</a>
-
-		<div class="subtext">One of the primary authors in white paper submitted to NASA</div>
-
-		<div class="subtext" style="margin-bottom: 20px;">
-		New eras in science and exploration call for new tools and new perspectives. By taking novel approaches to problems old and new, and by using innovative and proven methods, great steps in scientific progress are made. Perhaps no field lends itself as well to this role in scientific progress in the current age as artificial intelligence (AI).
-
-		Given that AI is not as abstract as it is often perceived to be, there are potential applications to research being done at NASA. By exploring uses in industry and academia, connections to research and analysis, project management, and space missions are made, encouraging further investment in AI and interaction with the AI community by NASA.
-
-		The value of AI is evidenced by previous work, having proved to be useful as well as economic. Advances in science and technology are being made using AI, so as leader in making scientific progress, NASA should continue to increase its involvement in the field. This means including AI experts on projects, hosting seminars and events, and using the work that has already been done in the field. By taking these steps, new things could be achieved, and current work could be done better, more quickly, and more efficiently.
-		</div>
-		
-		<a target="blank" href="poster2.png" class="header" style="text-decoration: none;">Mammographic Density and Its Association to Genetic Risk</a>
-		
-		<div class="subtext">Work presented at Intel's International Science and Engineering Fair, 2015.</div>
-		
-		<div class="subtext" style="margin-bottom: 20px;">
-		Breast density in mammograms can obscure cancers, and raise uncertainty on the effectiveness of mammograms. In this project, statistical software was run on mammographic breast density, patient demographics, genetic risk assessment results, and Stavros lymph node character to determine whether breast density is an independent risk factor for breast cancer. This was a retrospective study of ultrasounds and mammograms performed at a community hospital. Using Microsoft Excel and SAS, correlation coefficients and ANOVAs were tabulated, yielding the statistically significant result that breast density is an independent risk factor for breast cancer.
-		</div>
-		
-		<a target="poster1.pdf" class="header" style="text-decoration: none;">Characterizing Axillary Lymph Nodes</a>
-		
-		<div class="subtext">Work presented at Intel's International Science and Engineering Fair, 2014.</div>
-		
-		<div class="subtext" style="margin-bottom: 20px;">
-		While abnormal lymph nodes were well described, there is not good data or description of the range of appearances of normal lymph nodes. If normal lymph nodes are well described, then it follows that ultrasound detection of abnormal lymph nodes would become more sensitive and specific. This could be advantageous in looking for early involvement and staging of breast cancer. It could also help detect and differentiate other disease processes such as infection, inflammation, or other neoplastic conditions such as lymphoma. This retrospective study correlates and conducts ANOVAs on patient demographics and Stavros lymph node character. This should improve sensitivity and specificity of staging breast cancer and also reduce the number of unnecessary biopsies.
-		</div>
-
-		<div class="copy">&copy; Jack Collison, 2018</div>
-
-	</div>
-
-	<div id="projects" class="slide6">
-
-		<div class="title">Projects</div>
-
-		<div class="header collapsible_proj">Phenotyping Alzheimer's with Electronic Health Records</div>
-
-		<div class="content_proj">
-			<div class="subtext">
-				<span class="emphasis2">DESCRIPTION</span> Alzheimer's disease is a chronic neurodegenerative disease associated with of 60–70% of cases of dementia. The cause of Alzheimer's disease is poorly understood as are the disease subtypes. What risk factors exist for Alzheimer’s and are its sequelae are recorded in electronic health records?  Do they vary by age of Alzheimer’s disease onset? Gender? Using the Foundation for Precision Medicine's Electronic Health Record data, this work seeks to better characterize Alzheimer’s disease subtypes using unsupervised machine learning methods. <br /> 
-				
+		<div class="container">
+			<div class="about" ">
+				<div class="about-head">About</div>
+				<div class="forty-left">
+					<img class="profile" src="profile.png" alt="profile">
+				</div>
+				<div class="sixty-right">
+					<div class="brief-bio">
+						I'm an aspiring computational economist in the Bay Area interested in statistical learning and its applications in economics. Currently a student at Stanford University studying Economics and Statistics.
+					</div>
+				</div>
 			</div>
-			<div class="clear"></div>
-		</div>
+			<div class="clear" style="margin-bottom: 12%;"></div>
+			<div class="education" id="education_content" style="padding-top: 50px; width: 100%;">
+				<div class="hideme education-head">Education &amp; Coursework</div>
 
-		<div class="header collapsible_proj">NASA CAMS</div>
+				<div id="stanford_edu" style="margin-left: 37.5%; width: 25%; margin-top: 25px; text-align: center;">
+						<img src="stanford.png" alt="stanford logo" id="stanford_edu" height="100px;">
+				</div>
+				<div class="hideme description" style="font-size: 24px; float: left; padding-top: 25px; padding-bottom: 25px; clear: both; width: 100%; text-align: center;">
+					Stanford University Class of 2021 | M.S. Statistics 
+					</br></br>
+					Stanford University Class of 2020 | B.A. Economics
+				</div>
 
-		<div class="content_proj">
-			<div class="subtext">
-				<span class="emphasis2">DESCRIPTION</span> Meteors are being tracked through the sky by the CAMS system around the world. However, many of the "meteors" picked up by this system are false positives -- it also detects birds, clouds, and planes without distringuishing between them. In the past, manual inspection was the way to purge these falsities. In this project, a Python script was developed to automate the process of tracking meteor showers associated with long period comets by extracting data from an FTP server, running computer vision analysis, updating logs, using deep-learning-based classification (for ridding the dataset of false positives), and upload cleaned data for visualization. <br/> 
-				
-			</div>
-			<div class="links">
-				<a target="blank" style="color: #4292c6;" href="http://cams.seti.org/FDL/">Website</a> | <a target="blank" style="color: #4292c6;" href="comets.pdf">Paper</a> | <a target="blank" style="color: #4292c6;" href="https://www.youtube.com/watch?v=foB9y1uhn6I">Video</a> | <a target="blank" style="color: #4292c6;" href="imc_pres.pdf">Presentation</a>
-			</div>
+				<div class="whole-sixty" id="education_zip">
+					<button class="hideme sectitle collapsible_educ" id="theoretical_econ">THEORETICAL ECONOMICS</button>
+					<div class="content_educ">
+						<div class="col2 left">
+							<div class="bullet"><span class="emphasis">ECON 1 </span> Principles of Economics <div class="explainer">Introductory course in economics; develop intuition in both micro and macroeconomics</div></div>
+							<div class="bullet"><span class="emphasis">ECON 51</span> Economic Analysis II<div class="explainer">Neoclassical analysis of equilibria, welfare, risk and uncertainty, and game theory using multivariable calculus</div></div>
+							<div class="bullet"><span class="emphasis">ECON 136 </span> Market Design<div class="explainer">Design of matching algorithms, design of auctions, and design of platforms and exchanges</div></div>
+						</div>
+						
+						<div class="col2 right">
+							<div class="bullet"><span class="emphasis"> ECON 50</span> Economics Analysis I<div class="explainer">Framework for individual consumer and firm behavior; tools developed from multivariable calculus and optimization</div></div>
+							<div class="bullet"><span class="emphasis">ECON 52 </span> Economic Analysis III<div class="explainer">Theory of long-run economic growth, fluctuations, fiscal policy, and monetary policy </div></div>
+							<div class="bullet"><span class="emphasis">ECON 149 </span> Modern Firm Theory<div class="explainer">Management and strategy of organizations, especially around information systems, target setting and human resources</div></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<button class="hideme sectitle collapsible_educ" id="applied_econ">APPLIED ECONOMICS &amp; ECONOMETRICS</button>
+					<div class="content_educ">
+						<div class="col2 left">
+							<div class="bullet"><span class="emphasis">ECON 102A</span> Introduction to Statistical Methods (Postcalculus) for Social Scientists<div class="explainer">Probabalistic modeling and statistical techniques relevant for economics and econometrics</div></div>
+							<div class="bullet"><span class="emphasis">ECON 45 </span> Using Big Data to Solve Social and Economic Problems<div class="explainer">Regression analysis, causal inference, and machine learning applied to problems in the social sector </div></div>
+							<div class="bullet"><span class="emphasis">ECON 146 </span> Economics of Education<div class="explainer">Application of economics from fields such as public and labor economics, macroeconomics, and industrial organization</div></div>
+						</div>
 
-			<div class="clear"></div>
-		</div>
+						<div class="col2 right">
+							<div class="bullet"><span class="emphasis">ECON 102B </span> Applied Econometrics<div class="explainer">Intermediate econometrics, developing regression techniques, and goodness-of-fit tests with STATA</div><br></div>
+							<div class="bullet"><span class="emphasis">ECON 112 </span> Financial Markets and Institutions: Recent Developments<div class="explainer">Quantitative study on mortgages, securitization, credit ratings, and monetary policy, among others</div></div>
+							<div class="bullet"><span class="emphasis">ECON 199D </span> Honors Thesis Research <div class="explainer">Directed research under an advisor in order to complete an honors thesis</div></div>
+						</div>
 
-		<div class="header collapsible_proj">Mammographic Density and Its Association to Genetic Risk</div>
+						<div class="clear"></div>
+					</div>
 
-		<div class="content_proj">
-			<div class="subtext">
-				<span class="emphasis2">DESCRIPTION</span>
+					<button class="hideme sectitle collapsible_educ" id="stats">STATISTICS &amp; COMPUTER SCIENCE</button>
+					<div class="content_educ">
+						<div class="col2 left">
+							<div class="bullet"><span class="emphasis">CS 106B </span> Programming Abstractions <div class="explainer">Fundamentals of programming abstractions; study of data structures and basic algorithms in C++</div></div>
+							<div class="bullet"><span class="emphasis">STATS 202 </span> Data Mining and Analysis<div class="explainer">Developed machine learning methods in R to discover patterns and relationships in large datasets</div></div>
+							<div class="bullet"><span class="emphasis">ECON 293 </span> Machine Learning and Causal Inference<div class="explainer">Machine learning methods applied toausal inference based on randomized experiments and observational studies</div></div>
+							<div class="bullet"><span class="emphasis">CS 221 </span> AI: Principles and Techniques<div class="explainer">Topics include search, constrained models, games, Markov processes, graphical models, machine learning, and logic</div></div>
+						</div>
+						
+						<div class="col2 right">
+							<div class="bullet"><span class="emphasis"> STATS 191 </span> Introduction to Applied Statistics<div class="explainer">Statistical tools for data analysis, including regression, ANOVA, bootstrap, and cross-validation in R</div></div>
+							<div class="bullet"><span class="emphasis">STATS 216 </span> Introduction to Statistical Learning<div class="explainer">Developed tools including regressions, non-linear models, tree-based methods, and unsupervised clustering in R</div></div>
+							<div class="bullet"><span class="emphasis">STATS 315B </span> Modern Applied Statistics: Data Mining<div class="explainer">In depth study of classification and regression models in application and theory</div></div>
+						</div>
 
-				Breast density in mammograms can obscure cancers, and raise uncertainty on the effectiveness of mammograms. In this project, statistical software was run on mammographic breast density, patient demographics, genetic risk assessment results, and Stavros lymph node character to determine whether breast density is an independent risk factor for breast cancer. This was a retrospective study of ultrasounds and mammograms performed at a community hospital. Using Microsoft Excel and SAS, correlation coefficients and ANOVAs were tabulated, yielding the statistically significant result that breast density is an independent risk factor for breast cancer. Work presented at Intel's International Science and Engineering Fair in 2015.<br/>
+						<div class="clear"></div>
+					</div>
+
+					<button class="hideme sectitle collapsible_educ" id="math">MATHEMATICS</button>
+					<div class="content_educ">
+						<div class="col2 left">
+							<div class="bullet"><span class="emphasis">MATH 51 </span> Linear Algebra and Multivariable Calculus<div class="explainer">Matrix algebra and linear transformations, eigenvalues, gradients, and constrained optimization, among others</div></div>
+							<div class="bullet"><span class="emphasis">STATS 116 </span> Theory of Probability<div class="explainer">Probability spaces of models or phenomena with  statistical regularity; proof-based with multivariable calculus</div></div>
+						</div>
+						
+						<div class="col2 right">
+							<div class="bullet"><span class="emphasis">CS 103 </span> Mathematical Foundations of Computing <div class="explainer">Predicate logic, induction, set theory, formal language theory, Turing machines, and more; proof-based</div></div>
+							<div class="bullet"><span class="emphasis">STATS 200 </span> Statistical Inference<div class="explainer">Neyman-Pearson, MLE, Bayesian analysis, hypothesis tests, and sample theory </div></div>
+						</div>
+
+						<div class="clear"></div>
+					</div>
+					
+					<button class="hideme sectitle collapsible_educ" style="margin-bottom: 12px;" id="language">LANGUAGE</button>
+					<div class="content_educ" style="margin-bottom: 12px;">
+						<div class="col2 left">
+							<div class="bullet"><span class="emphasis">CHINLANG 1 </span> First-Year Modern Chinese, First Quarter <div class="explainer">Course in Mandarin, including conversation, grammar, reading, and elementary composition skills</div></div>
+							<div class="bullet"><span class="emphasis">CHINLANG 3 </span> First-Year Modern Chinese, Third Quarter <div class="explainer">Continuation of study of Mandarin; continue developing conversation, grammar, reading, and composition skills</div></div>
+						</div>
+
+						<div class="col2 right">
+							<div class="bullet" style="margin-bottom: 20px;"><span class="emphasis">CHINLANG 2 </span> First-Year Modern Chinese, Second Quarter<div class="explainer">Continuation of study of Mandarin; continue developing conversation, grammar, reading, and composition skills</div></div>
+						</div>
+					</div>
+				</div>
 
 			</div>
-
-			<div class="links">
-				<a target="blank" style="color: #4292c6;" href="poster2.png">Poster</a> | <a style="color: #4292c6;" target="blank" href="writeup2.pdf">Paper</a>
+			<div class="clear" style="margin-bottom: 4%;"></div>
+			<div class="experience" id="experience_content" style="padding-top: 50px;">
+				<div class="hideme experience-head">Experience</div>
+				<div class="exp_header" id="exp_header">
+					<div class="desc-job" id="quantco_logo">
+						<img class="hideme logo-exp" src="quantco.png" alt="quantco logo" id="quantco" height="100px;">
+					</div>
+					<div class="desc-job" id="ellington_logo">
+						<img class="hideme logo-exp" src="ellington.png" alt="ellington logo" id="ellington" height="100px;">
+					</div>
+					<div class="desc-job" id="siepr_logo">
+						<img class="hideme logo-exp" src="siepr.png" alt="siepr logo" id="siepr" height="100px;">
+					</div>
+					<div class="desc-job" id="nasa_logo">
+						<img class="hideme logo-exp" src="nasa.png" alt="nasa logo" id="nasa" height="100px;">
+					</div>
+				</div>
+				<div class="content-wrapper-exp">
+					<div id="exp-quantco" style="width: 50%;">
+						<div class="desc-job-name" id="quantco_name">QuantCo</div>
+						</br>
+						<div class="desc-job-all" id="quantco_content">
+							<div class="desc-header" style="width: 100%;">
+								<b style="font-size: 18px;">Data Science and Analytics Intern</b>
+								</br>
+								<i>Summer 2020</i>
+							</div>
+							<div class="desc-content"">
+								</br>
+								Incoming summer intern in QuantCo's Berlin offices. Responsibilities include developing and implementing algorithms to drive important business decisions.
+							</div>
+						</div>
+					</div>
+					<div id="exp-ellington" style="width: 50%;">
+						<div class="desc-job-name" id="ellington_name">Ellington Management Group</div>
+						</br>
+						<div class="desc-job-all" id="ellington_content">
+							<div class="desc-header" style="width: 100%;">
+								<b style="font-size: 18px;">Research Analyst Intern</b>
+								</br>
+								<i>Summer 2019</i>
+							</div>
+							<div class="desc-content">
+								</br>
+								Analyzed large datasets, formulated statistical models, and assisted in executing trades with ad hoc analysis at Ellington Management Group. Responsible for the creation of new datasets and statistical models on opague products and markets. Tools include R, SQL, and Python to implement sampling, data interpolation, time-series models, and regression analysis.
+							</div>
+						</div>
+					</div>
+					<div id="exp-siepr" style="width: 50%;">
+						<div class="desc-job-name" id="siepr_name">Stanford Institute for Economic Policy Research</div>
+						</br>
+						<div class="desc-job-all" id="siepr_content">
+							<div class="desc-header" style="width: 100%;">	
+								<b style="font-size: 18px;">Research Assistant</b>
+								</br>
+								<i>Autumn 2017 - Spring 2019</i>		
+							</div>
+							<div class="desc-content">
+								</br>		
+								Analyzing credit card data from Visa Inc. on the universe of retail outlets in the U.S. accepting Visa credit and debit cards. Developing a comprehensive dataset on retail establishment location, entry, exit and card transactions for understanding offline and online competition and growth, as well as consumer welfare. Tools include data cleaning and merging, web scraping, and machine learning. Acting as a BPO to Visa Inc's Global Data Science division; received a grant for summer research on the project.
+							</div>
+						</div>
+					</div>
+					<div id="exp-nasa" style="width: 50%;">
+						<div class="desc-job-name" id="nasa_name">NASA Frontier Development Lab</div>
+						</br>
+						<div class="desc-job-all" id="nasa_content">
+							<div class="desc-header" style="width: 100%">
+								<b style="font-size: 18px;">Research Intern</b>
+								</br>
+								<i>Summer 2017</i>		
+							</div>
+							<div class="desc-content">
+								</br>
+								Automated the process of tracking of meteor showers associated with long period comets. Wrote a Python script to extract data from an FTP server, run computer vision analysis in C files, updating logs, running deep learning-based identification of false-positives, and upload cleaned data to server for visualization and analysis. In addition, wrote a policy paper on NASA's investment in artificial intelligence with several proofs of concept in the form of neural networks.
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+			<div class="clear" style="padding-bottom: 25px;"></div>
+			<div class="volunteering" id="volunteering_content" style="padding-top: 50px;">
+				<div class="hideme volunteering-head">On-Campus</div>
+				<div class="vol_header" id="vol_header">
+					<div class="desc-vol" id="sfsg_logo"">
+						<img class="hideme logo-vol" src="stanford.png" alt="sfsg logo" id="sfsg" height="100px;">
+					</div>
+					<div class="desc-vol" id="medschool_logo">
+						<img class="hideme logo-vol" src="medschool.png" alt="medschool logo" id="medschool" height="100px;">
+					</div>
+					<div class="desc-vol" id="ctc_logo">
+						<img class="hideme logo-vol" src="ctc.png" alt="ctc logo" id="ctc" height="100px;">
+					</div>
+				</div>
+				<div class="content-wrapper-vol">
+					<div id="vol-sfsg" style="width: 50%;">
+						<div class="desc-job-name" id="sfsg_name">Stanford Statistics for Social Good</div>
+						</br>
+						<div class="desc-job-all" id="sfsg_content">
+							<div class="desc-header" style="width: 100%;">
+								<b style="font-size: 18px;">Co-Chair, Data Scientist</b>
+								</br>
+								<i>Winter 2017 - Current</i>
+							</div>
+							<div class="desc-content">
+								</br>
+								Statistics for Social Good's mission is to identify the concrete social problems that can benefit from improved data analysis and the statistical and computational techniques needed to achieve these improvements. Responsibilities include organizing panels, events, projects, and meetings, as well as conducting statistical analysis on datasets provided by non-profits.
+							</div>
+						</div>
+					</div>
+					<div id="vol-medschool" style="width: 50%;">
+						<div class="desc-job-name" id="medschool_name">Stanford University School of Medicine</div>
+						</br>
+						<div class="desc-job-all" id="medschool_content">
+							<div class="desc-header" style="width: 100%;">	
+								<b style="font-size: 18px;">Data Scientist</b>
+								</br>
+								<i>Winter 2018</i>		
+							</div>
+							<div class="desc-content">
+								</br>		
+								The Oncoshare Project’s goal is to improve quality of breast cancer care using big data. Part of a group of undergraduate data scientists developing data visualizations to identify trends of interest, and conducting statistical analysis, using variables such as standardized incidence ratio, confidence intervals, and demographics.
+							</div>
+						</div>
+					</div>
+					<div id="vol-ctc" style="width: 50%;">
+						<div class="desc-job-name" id="ctc_name">Stanford Code the Change</div>
+						</br>
+						<div class="desc-job-all" id="ctc_content">
+							<div class="desc-header" style="width: 100%">
+								<b style="font-size: 18px;">Web Developer</b>
+								</br>
+								<i>Autumn 2016 - Spring 2017</i>		
+							</div>
+							<div class="desc-content">
+								</br>
+								Designed a website for CultureMesh, a nonprofit social networking platform that connects refugees, in conjunction with Stanford's Code the Change. Responsible for front-end development, using tools such as HTML and CSS.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear" style="padding-bottom: 25px;"></div>
+			<div class="research" id="research_content" style="padding-top: 50px;">
+				<div class="hideme research-head">Research</div>
+				<div class="research-name" id="research-name-1">
+					[1] A survey of southern hemisphere meteor showers
+				</div>
+				<div class="research-content" id="research-content-1">
+					<div style="color: black;">Jenniskens et. al. <i>Journal of Planetary and Space Sciences</i>, 2017</div>
+					</br>
+					Meteor showers identify streams of meteoroids that approach from a similar direction and presumably originated from the same parent object. In recent years, over 300 meteor showers have been identified, of which 112 have been established and are certain to exist. A working list of identified showers is maintained by the IAU Meteor Data Center. The southern hemisphere meteor showers are not as well mapped as those on the northern hemisphere. We report here on results from a CAMS-type video-based meteoroid orbit survey (Jenniskens et al., 2011) conducted in New Zealand in 2014–2016. The capability of the technique was demonstrated in earlier small scale video-based meteoroid orbit surveys in the southern hemi- sphere (e.g., Jopek et al., 2010; Molau and Kerr, 2014). The newly detected showers are compared to recent results from a southern hemi- sphere radar orbital survey conducted with the Southern Argentina Agile Meteor Radar (SAAMER) (Pokorny et al., 2017). It is found that video-based and radar-based observations detect, in general, different streams.
+					</br>
+					<a class="links" target="blank" href="comets.pdf">Paper</a>
+				</div>
+				<div class="research-name" id="research-name-2">
+					[2] Automating meteor validation and trajectory quality control in the search for long-period comets
+				</div>
+				<div class="research-content" id="research-content-2">
+					<div style="color: black;">De Cicco et. al. <i>International Meteor Conference</i>, 2017</div>
+					</br>
+					We describe an effort to automate the CAMS (Cameras for All-sky Meteor Surveillance) data re- duction pipeline using artificial intelligence techniques to discriminate meteors from other types of detections and to determine correct solutions during triangulation. The effort will make it possible to have the results from a night of low-light video observations available to the observers the following day. As part of the data reduction pipeline, meteors are classified as real and assigned to showers. Results are presented in such a way that each shower can be identified, and new showers from the occasional encounter with the dust trails of long-period comets can be recognized. The detection of such rare showers will allow to direct the search for long-period comets in dedicated deep surveys.
+					</br>
+					<a class="links" target="blank" href="imc.pdf">Paper</a>
+				</div>
+				<div class="research-name" id="research-name-3">
+					[3] Searching for Long-Period Comets with Deep Learning Tools
+				</div>
+				<div class="research-content" id="research-content-3">
+					<div style="color: black;">Zoghbi et. al. <i>NIPS Deep Learning for Physical Sciences</i>, 2017</div>
+					</br>
+					The aim of this paper is to provide Deep Learning tools to aid the search for debris of long-period comets. We describe an effort to automate the CAMS (Cameras for Allsky Meteor Surveillance) data reduction pipeline to discriminate meteors from other types of detection. The effort helps to process the data collected every night from low-light video observations, and makes results available to the observer the following day. Detections are classified as meteors or non-meteors using two methods, a convolutional neural network (CNN), and a long short term memory network (LSTM). Our achieved performance makes our models suitable to be deployed on site and help alleviate the cognitive load on astronomers to classify night detections.
+					</br>
+					<a class="links" target="blank" href="nips.pdf">Paper</a>
+				</div>
+			</div>
+			<div class="clear" style="padding-bottom: 25px;"></div>
+			<div class="projects" id="projects_content" style="padding-top: 50px;">
+				<div class="hideme projects-head">Projects</div>
+				<div class="project-name" id="project-name-1">
+					[1] Impacts of Online Food Delivery Services: Market Expansion and Consumer Spending Habits
+				</div>
+				<div class="project-content" id="project-content-1">
+					<div style="color: black;">Collison, <i>[Ongoing]</i></div>
+					</br>
+					The entry of online food delivery service firms has rapidly transformed traditional markets, greatly affecting both merchants and consumers. Online food delivery services are a prime example of the evolution of online markets and lend themselves well to a study of causal effects because of their staggered implementation across time and geographic location. Using a large payment card company’s individual-level credit card transactional data and estimates of income in conjunction with Census data, the project aims to address the causal implications of the entry of online food delivery services on both merchant sale performance and consumer spending habits. Advised by Professor Liran Einav.
 
-			<div class="clear"></div>
+				</div>
+				<div class="project-name" id="project-name-2">
+					[2] Examining Heterogeneity in Healthcare Costs
+				</div>
+				<div class="project-content" id="project-content-2">
+					<div style="color: black;">Collison and Fronsdal, <i>[Ongoing]</i></div>
+					</br>
+					This project uses individual-level electronic health records from the Foundation for Precision Medicine to identify heterogeneity in healthcare coverage across the United States. The dataset covers forty two states contains variables across diagnoses, insurance costs, and many other variables for each patient encounter. We seek to determine how healthcare costs differ across geography, procedures, and many other variables.
+				</div>
+				<div class="project-name" id="project-name-3">
+					[3] Using Social Determinants of Health to Assess Risk of Heart Disease
+				</div>
+				<div class="project-content" id="project-content-3">
+					<div style="color: black;">Collison and Steiger, 2019</div>
+					</br>
+					Social determinants of health are recognized as deeply predictive of an individual’s risk of illness, especially heart disease. The first part of this study uses county-level CDC data on demographics, heart disease incidence, insurance costs, and others to determine the risk of heart disease. The second part supplements the dataset with state-level Medicaid expansion data as a treatment to determine average treatment effects and policy optimizations.
+					</br>
+					<a class="links" target="blank" href="cs221.pdf">Paper</a>
+				</div>
+				<div class="project-name" id="project-name-4">
+					[4] Heterogeneous Treatment Effects of Online Food Delivery Services
+				</div>
+				<div class="project-content" id="project-content-4">
+					<div style="color: black;">Collison, 2019</div>
+					</br>
+					The entry of online food delivery services has rapidly transformed traditional markets, greatly affecting both merchants and consumers. Online food delivery services are a prime example of the evolution of online markets and lend themselves well to a study of causal effects because of their staggered implementation across time and geographic location. Causal effects of the entry of these firms on the sales revenue of different food-related markets that exploits the staggered deployment of online food delivery services are quantified. The study concludes with an optimal policy for market expansion to maximize treatment effects.
+				</div>
+				<div class="project-name" id="project-name-5">
+					[5] Mammographic Density and Its Association to Genetic Risk
+				</div>
+				<div class="project-content" id="project-content-5">
+					<div style="color: black;">Collison and Collison <i>Intel ISEF</i>, 2015</div>
+					</br>
+					Breast density in mammograms can obscure cancers, and raise uncertainty on the effectiveness of mammograms. In this project, statistical software was run on mammographic breast density, patient demographics, genetic risk assessment results, and Stavros lymph node character to determine whether breast density is an independent risk factor for breast cancer. This was a retrospective study of ultrasounds and mammograms performed at a community hospital. Using Microsoft Excel and SAS, correlation coefficients and ANOVAs were tabulated, yielding the statistically significant result that breast density is an independent risk factor for breast cancer.
+				</div>
+				<div class="project-name" id="project-name-6">
+					[6] Characterizing Axillary Lymph Nodes
+				</div>
+				<div class="project-content" id="project-content-6">
+					<div style="color: black;">Collison <i>Intel ISEF</i>, 2014</div>
+					</br>
+					While abnormal lymph nodes were well described, there is not good data or description of the range of appearances of normal lymph nodes. If normal lymph nodes are well described, then it follows that ultrasound detection of abnormal lymph nodes would become more sensitive and specific. This could be advantageous in looking for early involvement and staging of breast cancer. It could also help detect and differentiate other disease processes such as infection, inflammation, or other neoplastic conditions such as lymphoma. This retrospective study correlates and conducts ANOVAs on patient demographics and Stavros lymph node character. This should improve sensitivity and specificity of staging breast cancer and also reduce the number of unnecessary biopsies.
+				</div>
+			</div>
+			<div class="clear" style="padding-bottom: 25px;"></div>
 		</div>
-
-		<div class="header collapsible_proj">Characterizing Axillary Lymph Nodes</div>
-
-		<div class="content_proj">
-			<div class="subtext">
-				<span class="emphasis2">DESCRIPTION</span> While abnormal lymph nodes were well described, there is not good data or description of the range of appearances of normal lymph nodes. If normal lymph nodes are well described, then it follows that ultrasound detection of abnormal lymph nodes would become more sensitive and specific. This could be advantageous in looking for early involvement and staging of breast cancer. It could also help detect and differentiate other disease processes such as infection, inflammation, or other neoplastic conditions such as lymphoma. This retrospective study correlates and conducts ANOVAs on patient demographics and Stavros lymph node character. This should improve sensitivity and specificity of staging breast cancer and also reduce the number of unnecessary biopsies. Work presented at Intel's International Science and Engineering Fair in 2014.<br /> 
-				
-			</div>
-
-			<div class="links">
-				<a target="blank" style="color: #4292c6;" href="poster1.pdf">Poster</a>
-			</div>
-		</div>
-
-		<div class="clear" style="margin-bottom: 20px;"></div>
-		<div class="copy">&copy; Jack Collison, 2018</div>
-
-	</div>
-</div>
-<div id="particles-js"></div>
-
-<script type="text/javascript">
-
-	document.addEventListener("DOMContentLoaded", function(event) { 
-
-		var acc = document.getElementsByClassName("collapsible_educ");
-		var panel = document.getElementsByClassName('content_educ');
-
-		for (var i = 0; i < acc.length; i++) {
-		    acc[i].onclick = function() {
-		        var setClasses = !this.classList.contains('enabled');
-		        setClass(acc, 'enabled', 'remove');
-		        setClass(panel, 'show', 'remove');
-
-		        if (setClasses) {
-		            this.classList.toggle("enabled");
-		            this.nextElementSibling.classList.toggle("show");
-		        }
-		    }
-		}
-
-		function setClass(els, className, fnName) {
-		    for (var i = 0; i < els.length; i++) {
-		        els[i].classList[fnName](className);
-		    }
-		}
-
-	});
-
-	document.addEventListener("DOMContentLoaded", function(event) { 
-
-		var acc = document.getElementsByClassName("collapsible_proj");
-		var panel = document.getElementsByClassName('content_proj');
-
-		for (var i = 0; i < acc.length; i++) {
-		    acc[i].onclick = function() {
-		        var setClasses = !this.classList.contains('enabled');
-		        setClass(acc, 'enabled', 'remove');
-		        setClass(panel, 'show', 'remove');
-
-		        if (setClasses) {
-		            this.classList.toggle("enabled");
-		            this.nextElementSibling.classList.toggle("show");
-		        }
-		    }
-		}
-
-		function setClass(els, className, fnName) {
-		    for (var i = 0; i < els.length; i++) {
-		        els[i].classList[fnName](className);
-		    }
-		}
-
-	});
-
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
-
-	for (i = 0; i < coll.length; i++) {
-	  coll[i].addEventListener("click", function() {
-	    this.classList.toggle("active");
-	    var content = this.nextElementSibling;
-	    if (content.style.maxHeight){
-	      content.style.maxHeight = null;
-	    } else {
-	      content.style.maxHeight = content.scrollHeight + "px";
-	    }
-	  });
-	}
-
-	var fade_out = function() {
-  		$("#intro").fadeOut(800).empty();
-	}
-
-	setTimeout(fade_out, 3000);
-
-	var numSlides = 6;
-	var current = 1;
-
-	document.getElementById("popup").style.display = "none";
-
-	function checkWindowSize() {
-		if(document.body.offsetWidth < 900) {
-			document.getElementById("popuptext").style.fontSize = "15px";
-			document.getElementById("popuptext").innerHTML = "View on desktop or increase the screen width to continue.";
-			document.getElementById("popup").style.display = "block";	
-		} else {
-			document.getElementById("popup").style.display = "none";
-		}
-	}
-
-	window.onresize = checkWindowSize;
-	checkWindowSize();
-
-	if(window.location.hash != "") {
-		for(var i = 1; i <= numSlides; i++) {
-			if(window.location.hash == "#" + document.getElementsByClassName("slide"+i)[0].id) {
-				current = i;
-				break;
-			}
-		}
-	} else {
-		window.location.hash = document.getElementsByClassName("slide1")[0].id;
-	}
-
-	for(var i = 1; i <= numSlides; i++) {
-		var elem = document.getElementsByClassName("slide"+i)[0];
-		var navLink = "<div id='nav" + i + "' onclick='activate(" + i + ");' class='header";
-		if(i == current) navLink += " active"; else elem.style.display = "none";
-		navLink += "'>" + elem.id.charAt(0).toUpperCase() + elem.id.substring(1).replace(/_/g, ' &amp; ') + "</div>";
-		document.getElementById("navbar").innerHTML += navLink;
-	}
-
-	function activate(ind) {
-		current = ind;
-		window.location.hash = document.getElementsByClassName("slide"+ind)[0].id;
-		for(var i = 1; i <= numSlides; i++) {
-			var elem = document.getElementsByClassName("slide"+i)[0];
-			if(i == ind) { 
-				elem.style.display = "block";
-				document.getElementById("nav"+i).className = "header active";
-			} else { 
-				elem.style.display = "none";
-				document.getElementById("nav"+i).className = "header";
-			}
-		}
-	}
-
-</script>
-
-<script src="particles.js"></script>
-<script src="app.js"></script>
-
-</body>
+		<script src="script.js"></script>
+		<script src="particles.js"></script>
+		<script src="app.js"></script>
+	</body>
 </html>
