@@ -72,7 +72,7 @@ body {
 
 
 .desc-vol {
-	width:33.33%; 
+	width:25%; 
 	top: 0; 
 	left: 0; 
 	float: left; 
@@ -141,6 +141,48 @@ body {
 	text-align: justify;
 }
 
+.fa {
+  padding: 5px;
+  font-size: 18px;
+  width: 18px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+    /*opacity: 0.7;*/
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+	-webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-github {
+  background: #ff5c33;
+  color: white;
+}
+
+.fa-fw {
+  background: black;
+  color: white;
+}
 
 .logo-exp {
 	padding-top: 25%;

@@ -388,7 +388,7 @@ $(function(){
 	    $allItems.not($(itemId).toggle()).hide();
 	    $allHeader.not($(logoId)).toggle();
 	    if($(logoId)[0].style.paddingLeft == ""){
-	    	$(logoId)[0].style.paddingLeft = "33.33%";
+	    	$(logoId)[0].style.paddingLeft = "37.5%";
 	    }
 	    else{
 	    	$(logoId)[0].style.paddingLeft = "";
