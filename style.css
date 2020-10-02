@@ -184,6 +184,11 @@ body {
   color: white;
 }
 
+.fa-envelope {
+  background: gray;
+  color: white;
+}
+
 .logo-exp {
 	padding-top: 25%;
 	-webkit-transition: all 0.5s ease-in;
