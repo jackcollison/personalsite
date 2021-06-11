@@ -306,12 +306,6 @@ img.profile {
   color: white;
 }
 
-.fa-github {
-  background: #ff6666;
-  color: white;
-  padding-left: 5px;
-}
-
 #particles-js canvas{
 	position: fixed;
 	width: 100%;
